@@ -29,7 +29,10 @@ self.addEventListener("activate", (evt) => {
     caches.keys().then((keyList) => {
       return Promise.all(
         keyList.map((key) => {
-          
+          if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
+            
+            return caches.delete(key);
+          }
         })
       );
     })
