@@ -31,6 +31,8 @@ function checkDatabase() {
   const getAll = store.getAll();
 
   getAll.onsuccess = function() {
-    
+    if (getAll.result.length > 0) {
+      
+    }
   };
 }
