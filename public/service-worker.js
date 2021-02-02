@@ -12,3 +12,7 @@ const FILES_TO_CACHE = [
   "/styles.css",
 ];
 
+// Install Service Worker
+self.addEventListener("install", (evt) => {
+  
+});
