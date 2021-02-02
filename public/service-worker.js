@@ -30,7 +30,7 @@ self.addEventListener("activate", (evt) => {
       return Promise.all(
         keyList.map((key) => {
           if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-            
+            console.log("Removing old cache data", key);
             return caches.delete(key);
           }
         })
