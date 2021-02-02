@@ -27,7 +27,11 @@ self.addEventListener("install", (evt) => {
 self.addEventListener("activate", (evt) => {
   evt.waitUntil(
     caches.keys().then((keyList) => {
-      
+      return Promise.all(
+        keyList.map((key) => {
+          
+        })
+      );
     })
   );
   self.clients.claim();
