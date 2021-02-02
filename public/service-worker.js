@@ -45,7 +45,12 @@ self.addEventListener("fetch", (evt) => {
   if (evt.request.url.includes("/api/")) {
     
     evt.respondWith(
-      
+      caches
+        .open(DATA_CACHE_NAME)
+        .then((cache) => {
+          
+        })
+        .catch((err) => console.log(err))
     );
 
     return;
