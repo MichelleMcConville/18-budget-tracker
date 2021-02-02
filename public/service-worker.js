@@ -25,5 +25,10 @@ self.addEventListener("install", (evt) => {
 
 // Activate Service Worker
 self.addEventListener("activate", (evt) => {
-  
+  evt.waitUntil(
+    caches.keys().then((keyList) => {
+      
+    })
+  );
+  self.clients.claim();
 });
