@@ -14,5 +14,11 @@ const FILES_TO_CACHE = [
 
 // Install Service Worker
 self.addEventListener("install", (evt) => {
-  
+  evt.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      
+      return cache.addAll(FILES_TO_CACHE);
+    })
+  );
+  self.skipWaiting();
 });
