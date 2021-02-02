@@ -39,3 +39,9 @@ self.addEventListener("activate", (evt) => {
   );
   self.clients.claim();
 });
+
+// Fetch Files
+self.addEventListener("fetch", (evt) => {
+  
+});
+
