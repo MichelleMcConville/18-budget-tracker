@@ -1,21 +1,18 @@
 let db;
 const request = indexedDB.open("budget", 1);
 
-request.onupgradeneeded = function (event) {
-  const db = event.target.result;
+request.onupgradeneeded = function (e) {
+  const db = e.target.result;
   db.createObjectStore("pending", { autoIncrement: true });
 };
 
-request.onsuccess = function (event) {
-  db = event.target.result;
-
-  if (navigator.onLine) {
-    checkDatabase();
-  }
+request.onsuccess = function (e) {
+  db = e.target.result;
+  if (navigator.onLine) { checkDatabase(); }
 };
 
-request.onerror = function (event) {
-  console.log("Woops! " + event.target.errorCode);
+request.onerror = function (e) {
+  console.log("Woops! " + e.target.errorCode);
 };
 
 function saveRecord(record) {
