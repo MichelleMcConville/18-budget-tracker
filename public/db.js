@@ -12,3 +12,7 @@ request.onsuccess = function(event) {
   if (navigator.onLine) { checkDatabase(); }
 };
 
+request.onerror = function(event) {
+  console.log("Woops! " + event.target.errorCode);
+};
+
