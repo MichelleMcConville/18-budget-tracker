@@ -55,7 +55,9 @@ self.addEventListener("fetch", (evt) => {
               }
               return response;
             })
-            
+            .catch((err) => {
+              return cache.match(evt.request);
+            });
         })
         .catch((err) => console.log(err))
     );
