@@ -22,3 +22,8 @@ self.addEventListener("install", (evt) => {
   );
   self.skipWaiting();
 });
+
+// Activate Service Worker
+self.addEventListener("activate", (evt) => {
+  
+});
