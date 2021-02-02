@@ -48,7 +48,14 @@ self.addEventListener("fetch", (evt) => {
       caches
         .open(DATA_CACHE_NAME)
         .then((cache) => {
-          
+          return fetch(evt.request)
+            .then((response) => {
+              if (response.status === 200) {
+                cache.put(evt.request.url, response.clone());
+              }
+              return response;
+            })
+            
         })
         .catch((err) => console.log(err))
     );
