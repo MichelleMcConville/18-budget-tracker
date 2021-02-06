@@ -1,5 +1,5 @@
 
-# [GitHub](https://github.com/MichelleMcConville/18-budget-tracker) 🔗  ***`  OR  `*** [Live Demo](https://mchel-budget-tracker.herokuapp.com/)🔗
+# [GitHub](https://github.com/MichelleMcConville/18-budget-tracker) 🔗 ***`OR`*** [Live Demo](https://mchel-budget-tracker.herokuapp.com/)🔗
 
 ![Badge](https://img.shields.io/badge/license-GPL%20v2-0526fc)
 
