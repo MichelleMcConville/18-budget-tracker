@@ -1,11 +1,16 @@
 body {
+  background: ghostwhite;
   font-size: 120%;
   font-family: Arial;
 }
 
 button, input {
+  border: solid .5px hotpink;
+  border-radius: 10px;
   font-size: 100%;
   font-family: Arial;
+  height: 30px;
+  text-align: center;
 }
 
 table {
@@ -13,7 +18,7 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #9B9BB3;
   text-align: left;
   padding: 8px;
 }
@@ -43,6 +48,7 @@ tr:nth-child(even) {
 }
 
 .transactions {
+  border: solid;
   text-align: left;
   max-height: 300px;
   overflow: auto;
